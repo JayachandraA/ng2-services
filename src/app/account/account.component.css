@@ -1,0 +1,6 @@
+.row{
+    border: 1px dotted red;
+    border-radius: 5px;
+    padding: 10px;
+    border-width: 1.5px;
+}

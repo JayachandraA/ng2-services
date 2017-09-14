@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  accounts = [{ name: 'Facebook', status: 'Active' }];
+  onAddNewAccount(event) {
+    // console.log(event);
+    this.accounts.push(event.account);
+   }
+  onStatusChanged(event) {
+    // console.log(event);
+    this.accounts[event.id].status = event.newStatus;
+   }
 }
