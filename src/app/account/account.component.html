@@ -4,8 +4,8 @@
     <h5 *ngIf="account">{{ account.name }}</h5>
     <hr>
     <p *ngIf="account">This account is {{ account.status }}</p>
-    <button class="btn btn-default" (click)="onChangeStatus('Active')">Active</button>
-    <button class="btn btn-default" (click)="onChangeStatus('Inactive')">Inactive</button>
-    <button class="btn btn-default" (click)="onChangeStatus('Unknown')">Unknown</button>
+    <button class="btn btn-default" [disabled]="account.status == 'Active'" (click)="onChangeStatus('Active')">Active</button>
+    <button class="btn btn-default" [disabled]="account.status == 'Inactive'" (click)="onChangeStatus('Inactive')">Inactive</button>
+    <button class="btn btn-default" [disabled]="account.status == 'Unknown'" (click)="onChangeStatus('Unknown')">Unknown</button>
   </div>
 </div>
